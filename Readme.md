@@ -84,3 +84,23 @@ Suggestions and improvements are welcome. Feel free to open an issue or submit a
 ## 📄 License
 
 This project is licensed under the MIT License.
+
+
+
+# Parcel 
+Dev build
+local server 
+Hot module replacement
+File Watching algorithm written in C++
+Caching Faster build
+Image optimization
+minification of files
+bundling
+compress
+consisten hashing
+code splitting
+differential bundling
+diagnostic, better error handling
+HTTP , HTTPS
+Tree Shaking - remove unused code 
+Different dev and production bundles
