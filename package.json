@@ -15,7 +15,6 @@
   },
   "license": "ISC",
   "author": "Prashant Tomar",
-  "type": "commonjs",
   "scripts": {
     "start": "parcel index.html",
     "build":"parcel build index.html",

@@ -35,5 +35,5 @@ const FunctionalComp = () => (
         {console.log("to use Js in JSX we use { } brackets inside JSX")}
     </div>
 )
-const root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(<FunctionalComp />)
+// const root = ReactDOM.createRoot(document.getElementById("root"))
+// root.render(<FunctionalComp />)
