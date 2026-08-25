@@ -28,7 +28,7 @@ const Body = () => {
         setFilteredRes(finaldata)
     }
 
-
+    // custom hook
     if (!useInternetStatus()) return (<h1>Oops Bro You are offline</h1>)
 
 

@@ -10,7 +10,6 @@ import Error from "./components/Error";
 import { Outlet } from "react-router";
 import { lazy,Suspense } from "react";
 import Shimmer from "./components/Shimmer";
-// import Grocery from "./components/Grocery";
 
 
 
@@ -47,7 +46,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/Grocery",
-        // element: <Grocery />
+        // custom loading using Lazy , it will group the js file different
         element: <Suspense fallback={<Shimmer/>}><Grocery /></Suspense>
       },
     ],
