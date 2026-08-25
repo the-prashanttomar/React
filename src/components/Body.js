@@ -44,7 +44,7 @@ const Body = () => {
                 <div className="res-cards">
                     {
                         filteredRes.map((data) => (
-                            <ResturauntCard key={data.info.id} resData={data.info} />
+                            <Link to={data.info.id}><ResturauntCard key={data.info.id} resData={data.info} /></Link>
                         ))
                     }
                 </div>

@@ -15,5 +15,4 @@ export const restaurants = [
     // { id: 15, resName: "Chinese Wok", cuisine: "Chinese", rating: 4.0, time: "24 Mins" },
     // { id: 16, resName: "Barbeque Nation", cuisine: "BBQ", rating: 4.8, time: "40 Mins" }
 ];
-
-export default restaurants
+export const innerLink = "https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.5010274&lng=77.4257319&restaurantId=61111"

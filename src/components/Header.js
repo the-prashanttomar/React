@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router";
 const Header = () => {
     const [btnName, setBtnName] = useState("Login") // usestate will rerender the Header component again
     console.log("header hai haider") // will be called whenever button is clicked
@@ -9,9 +10,9 @@ const Header = () => {
 
         <div className="nav-items">
             <ul>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Sign in</li>
+                <li><Link to='./'>Home</Link></li>
+                <li><Link to='./about'>About Us</Link></li>
+                <li><Link to='./contactus'>Contact</Link></li>
                 <li>Cart</li>
                 <button onClick={() => {
                     btnName === "Login" ? setBtnName("Logout") : setBtnName("Login")
