@@ -3,11 +3,14 @@ import ReactDOM from "react-dom/client";
 import Header from "./components/Header"
 import Body from "./components/Body"
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import About from "./components/About";
+// import About from "./components/About";
 import ContactUs from "./components/ContactUs";
-import ResturantDetails from "./components/ResturantDetails";
+import RestaurantDetails from "./components/RestaurantDetails";
 import Error from "./components/Error";
 import { Outlet } from "react-router";
+import { lazy,Suspense } from "react";
+import Shimmer from "./components/Shimmer";
+// import Grocery from "./components/Grocery";
 
 
 
@@ -17,6 +20,8 @@ const FoodApp = () => (
     <Outlet/>
   </div>
 );
+const Grocery = lazy(()=>import("./components/Grocery"))
+const About = lazy(()=>import("./components/About"))
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,15 +30,25 @@ const router = createBrowserRouter([
       
       {
         path: "/",
-        element: <ResturantDetails />
+        element: <Body />
+      },
+      {
+        path: "/resturaunt/:resId",
+        element: <RestaurantDetails />
       },
       {
         path: "/About",
-        element: <About />
+        element: <Suspense fallback={<Shimmer/>}><About /></Suspense>
+        // element: <About />
       },
       {
         path: "/contactus",
         element: <ContactUs />
+      },
+      {
+        path: "/Grocery",
+        // element: <Grocery />
+        element: <Suspense fallback={<Shimmer/>}><Grocery /></Suspense>
       },
     ],
     errorElement:<Error/>

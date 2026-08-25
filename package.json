@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "this is test code for my react appnpnp",
   "@parcel/resolver-default": {
-  "packageExports": true
-},
+    "packageExports": true
+  },
   "keywords": [
     "Prashant"
   ],
@@ -24,9 +24,12 @@
     "test": "jest"
   },
   "devDependencies": {
-    "parcel": "^2.16.4"
+    "parcel": "^2.16.4",
+    "postcss": "^8.5.26",
+    "tailwindcss": "^4.3.3"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-router": "^7.18.2",
