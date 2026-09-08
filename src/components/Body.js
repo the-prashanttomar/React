@@ -1,15 +1,16 @@
-import ResturauntCard from './ResturantCard'
+import ResturauntCard, { PromotedResturauntCard } from './ResturantCard'
 import Shimmer from './Shimmer'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router'
 import { useInternetStatus } from '../utils/useInternetStatus'
-import { cardData } from '../utils/constants'
+// import { cardData } from '../utils/constants'
 import { dataFetch } from '../utils/dataFetch'
 
 const Body = () => {
     const [resList, setResList] = useState([]);
     const [filteredRes, setFilteredRes] = useState([]);
     const [searchText, setSearchText] = useState('');
+    const ResCardPromoted = PromotedResturauntCard(ResturauntCard)
     let psudoData
     useEffect(() => {
         fetchData()
@@ -53,8 +54,12 @@ const Body = () => {
                 <div className="flex flex-wrap justify-center">
                     {
                         filteredRes.map((data) => {
-                            cardData.push([{ id: data.info.id, name: data.info.name }])
-                            return <Link key={data.info.id} to={"/resturaunt/" + data.info.id}><ResturauntCard key={data.info.id} resData={data.info} /></Link>
+                            return <Link key={data.info.id} to={"/resturaunt/" + data.info.id}>{
+                                data.info.isPromoted ?
+                                <ResCardPromoted  key={data.info.id} resData={data.info} />
+                                :
+                                <ResturauntCard key={data.info.id} resData={data.info} />
+                                }</Link>
                         })
                     }
             </div>

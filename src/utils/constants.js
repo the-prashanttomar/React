@@ -1,2 +1,2 @@
 
-export let cardData = []
+// export let cardData = []
